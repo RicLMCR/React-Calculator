@@ -1,4 +1,5 @@
 import {useState} from'react';
+import {evaluate} from 'mathjs'
 
 const App = () =>{
 
@@ -53,8 +54,8 @@ const delDisplay = ()=>{
 /* CALCULATION: '=' button to trigger forumla which turns the exisiting 'display' string into an equation
 before resolving the equation and then updating 'display' with the result */
 const equalDisplay = ()=>{
-  setDisplay(eval(display));
-  console.log(`Calculator says: ${eval(display)}`);
+  setDisplay(evaluate(display));
+  console.log(`Calculator says: ${evaluate(display)}`);
 }
 
   return (
